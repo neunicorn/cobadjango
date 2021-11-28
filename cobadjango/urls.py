@@ -22,6 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('playground/', include('playground.urls')),
     path('__debug__/', include(debug_toolbar.urls)),
-    path('blog/', include('blog.urls')),
+    path('', include('blog.urls')),
     path('ukmuinjkt/', include('ukmuinjkt.urls')),
 ]
