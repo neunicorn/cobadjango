@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 import debug_toolbar
+from users import views as user_views 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +25,5 @@ urlpatterns = [
     path('__debug__/', include(debug_toolbar.urls)),
     path('', include('blog.urls')),
     path('ukmuinjkt/', include('ukmuinjkt.urls')),
+    path('register/', user_views.register, name='register'),
 ]
